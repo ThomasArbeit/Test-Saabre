@@ -1,0 +1,33 @@
+.rating {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+
+ &__stars {
+  display: flex;
+  align-items: center;
+ }
+
+ &__star {
+  fill: #E3D027;
+  stroke: #E3D027;
+  stroke-width: 1.5px;
+  height:22px;
+  width:22px;
+
+  &--half {
+   fill: linear-gradient(to right, #E3D027 50%, white 50%);
+  }
+
+  &--off {
+   fill: white;
+  }
+ }
+
+ &__text {
+  font-size: 12px;
+  line-height: 100%;
+  font-weight: 600;
+  color: #8e8e8e;
+ }
+}
