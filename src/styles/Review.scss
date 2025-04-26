@@ -1,0 +1,27 @@
+.review {
+ display: flex;
+ gap: .75rem;
+ margin-bottom: 1rem;
+
+ &__img {
+  display: flex;
+  object-fit: cover;
+  border-radius: 50%;
+ }
+
+ &__content-header{
+  display: flex;
+  gap: .5rem;
+  font-size: 1rem;
+  line-height: 2rem;
+ }
+
+ &__date {
+  color: #8E8E8E;
+ }
+
+ &__content-comment {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+ }
+}

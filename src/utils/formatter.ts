@@ -25,3 +25,15 @@ export const formatDimensions = (dimensions: Dimension) => {
  const width = convertMillimetersToMeters(dimensions.width);
  return `${length}mx${width}mx${height}m`;
 }
+
+export const formatDateFr = (dateString: string ) => {
+ const date = new Date(dateString);
+
+ return date.toLocaleString('fr-FR', {
+  day: 'numeric',
+  month: 'long',
+  year: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit',
+ });
+}

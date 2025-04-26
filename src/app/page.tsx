@@ -9,7 +9,7 @@ export default async function Home () {
  const cars = await response.json();
  
  return <main>
- <h1>Catalogue Voiture</h1>
+ <h1>Toutes les voitures électriques et hybrides</h1>
   <ul>
    {cars.data.map((car: Car) => (
      <CarCard key={car.id} car={car}/>

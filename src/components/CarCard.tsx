@@ -5,44 +5,33 @@ import Badge from "./Bagde";
 import '@/styles/CarCard.scss';
 import KeyValueDisplay from "./KeyValueDisplay";
 import Rating from "./Rating";
+import { CarEntity } from "@/models/Car";
 
 type CarCardProps = {
- car: Car;
+ props: Car;
 };
 
-export default function CarCard ({car}:CarCardProps) {
- // Computed
+export default function CarCard ({props}:CarCardProps) {
 
- const isCommercialized = useMemo(() => {
-  return car.commercializationDates.end ? 'Non commercialisé' : 'Commercialisé';
- }, [car.commercializationDates.end]);
-
- const averageRating = useMemo(() => {
-  if (!car.reviews?.length) return
-  let summ = 0;
-  car.reviews.forEach(x => summ += parseInt(x.rating))
-  return (summ / car.reviews.length).toFixed(1);
- },[car.reviews])
-
- // Template
+ const car = new CarEntity(props);
 
  return <div className="carcard">
   <div className="carcard__img-wrapper">
-   <img src={`https://picsum.photos/seed/${car.id*10}/200/116`} alt={`Image d'une voiture du modele ${car.model} de la marque ${car.brand} `} className="carcard__img" />
+   <img src={`https://loremflickr.com/200/116/car`} alt={`Image d'une voiture du modele ${car.model} de la marque ${car.brand} `} className="carcard__img" />
   </div>
   <div className="carcard__content">
    <div className="carcard__content-left">
-    <h2>{car.brand} - {car.model}</h2>
-    <p className="carcard__price">{formatCurrency(car.pricing.currentPrice)}</p>
-    <Badge label={isCommercialized}/>
+    <h2>{car.fullTitle}</h2>
+    <p className="carcard__price">{car.readableCurrentPrice}</p>
+    <Badge label={car.readableCommercialisedStatus}/>
     {
-     car.reviews?.length ? <Rating rating={averageRating} numberOfRates={car.reviews.length} /> : null
+     car.reviews?.length ? <Rating rating={car.averageRating} numberOfRates={car.reviews.length} showText /> : null
     }
    </div>
    <div className="carcard__content-right">
-    <KeyValueDisplay label="Vitesse max" value={formatSpeed(car.maxSpeed)}/>
+    <KeyValueDisplay label="Vitesse max" value={car.readableMaxSpeed}/>
     <KeyValueDisplay label="Source d'énergie" value={car.energySource}/>
-    <KeyValueDisplay label="Dimensions" value={formatDimensions(car.dimensions)}/>
+    <KeyValueDisplay label="Dimensions" value={car.readableDimensions}/>
    </div>
   </div>
  </div>
