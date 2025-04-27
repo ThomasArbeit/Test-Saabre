@@ -5,7 +5,7 @@ import Rating from "@/components/Rating";
 import Review from "@/components/Review";
 import { CarEntity } from "@/models/Car";
 import { Reviews } from "@/types/globals";
-import { formatDateFr, formatSpeed } from "@/utils/formatter";
+import { formatDateFr } from "@/utils/formatter";
 import Image from "next/image";
 
 type Params = {
