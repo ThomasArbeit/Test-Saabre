@@ -17,7 +17,7 @@ export default function CarCard ({props}:CarCardProps) {
 
  return <div className="carcard">
   <div className="carcard__img-wrapper">
-   <img src={`https://loremflickr.com/200/116/car`} alt={`Image d'une voiture du modele ${car.model} de la marque ${car.brand} `} className="carcard__img" />
+   <img src={car.imageSrcSmall} alt={`Image d'une voiture du modele ${car.model} de la marque ${car.brand} `} className="carcard__img" />
   </div>
   <div className="carcard__content">
    <div className="carcard__content-left">

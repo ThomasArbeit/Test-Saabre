@@ -1,4 +1,5 @@
 import CarCard from "@/components/CarCard";
+import Pagination from "@/components/Pagination";
 import { Car } from "@/types/globals";
 import Link from "next/link";
 
@@ -31,18 +32,7 @@ export default async function Vehicules ({ searchParams } : SearchParamsProps) {
       ))}
     </ul>
 
-    {/* <div className="pagination">
-      {Array.from({ length: totalPages }).map((_, i) => (
-        <Link
-          key={i}
-          scroll={true}
-          href={`/vehicules?limit=${limit}&offset=${i * limit}`}
-          className={i + 1 === currentPage ? "pagination__link pagination__link--active" : " pagination__link"}
-        >
-          {i + 1}
-        </Link>
-      ))}
-    </div> */}
+    <Pagination limit={limit} actualPage={currentPage} totalPages={totalPages} basePath={`/vehicules`}/>
   </main>
 );
 }

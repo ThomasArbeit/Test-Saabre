@@ -27,7 +27,7 @@ export default async function ModalVehiculeDetail({ params }: { params: Params }
           <h1 className="page__header-title">{car.fullTitle}</h1>
           <p className="page__header-annotation">Derniere mise a jour : {formatDateFr(car.lastUpdated)}</p>
         </div>
-        <Image className="page__header-img" src={car.imageSrc} width={1087} height={600} alt={`Image d'une voiture du modele ${car.model} de la marque ${car.brand}`}></Image>
+        <Image className="page__header-img" src={car.imageSrcBig} width={1087} height={600} alt={`Image d'une voiture du modele ${car.model} de la marque ${car.brand}`}></Image>
       </header>
       <div className="page__main">
         <div className="page__content">
