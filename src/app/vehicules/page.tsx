@@ -4,11 +4,12 @@ import { Car } from "@/types/globals";
 import Link from "next/link";
 
 type SearchParamsProps = {
- searchParams: {limit?: string, offset?: string};
+  limit?: string;
+  offset?: string;
 };
 
-export default async function Vehicules ({ searchParams } : SearchParamsProps) {
- const searchParamsAwaited = await searchParams;
+export default async function Vehicules ({ params } : {params: Promise<SearchParamsProps>}) {
+ const searchParamsAwaited = await params;
  const limit = parseInt(searchParamsAwaited?.limit || '10');
  const offset = parseInt(searchParamsAwaited?.offset || '0');
  const currentPage = Math.floor(offset / limit) + 1;
