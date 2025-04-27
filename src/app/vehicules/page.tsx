@@ -7,7 +7,7 @@ type SearchParamsProps = {
  searchParams: {limit?: string, offset?: string};
 };
 
-export default async function Vehicules ({ searchParams } : SearchParamsProps) {
+export default async function Vehicules ({ searchParams } : any) {
  const searchParamsAwaited = await searchParams;
  const limit = parseInt(searchParamsAwaited?.limit || '10');
  const offset = parseInt(searchParamsAwaited?.offset || '0');
