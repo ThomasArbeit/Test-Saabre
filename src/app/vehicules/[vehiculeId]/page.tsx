@@ -12,9 +12,9 @@ type Params = {
   vehiculeId: string;
 };
 
-export default async function ModalVehiculeDetail({ params }: { params: Params }) {
-  const paramsAvaited = await params;
-  const res = await fetch(`https://saabre-fake-api.osc-fr1.scalingo.io/cars/${paramsAvaited.vehiculeId}`, { cache: "no-store" });
+export default async function VehiculeDetail({ params }: { params: Params }) {
+  const {vehiculeId} = await params;
+  const res = await fetch(`https://saabre-fake-api.osc-fr1.scalingo.io/cars/${vehiculeId}`, { cache: "no-store" });
   const data = await res.json();
   const car = new CarEntity(data.data);
 
