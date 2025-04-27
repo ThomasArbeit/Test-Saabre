@@ -14,7 +14,7 @@ type Params = {
 
 export default async function VehiculeDetail({ params }: { params: Promise<Params> }) {
   const {vehiculeId} = await params;
-  const res = await fetch(`https://saabre-fake-api.osc-fr1.scalingo.io/cars/${vehiculeId}`, { cache: "no-store" });
+  const res = await fetch(`https://saabre-fake-api.osc-fr1.scalingo.io/cars/${vehiculeId}`);
   const data = await res.json();
   const car = new CarEntity(data.data);
 
