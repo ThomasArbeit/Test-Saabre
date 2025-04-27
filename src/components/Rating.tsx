@@ -1,4 +1,4 @@
-import {Star, StarHalf, StarOff} from "lucide-react";
+import {Star} from "lucide-react";
 import '@/styles/Rating.scss'
 
 type RatingProps = {

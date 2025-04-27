@@ -1,6 +1,4 @@
 import { Car } from "@/types/globals";
-import { useMemo } from "react";
-import { formatCurrency, formatDimensions, formatSpeed } from "@/utils/formatter";
 import Badge from "./Bagde";
 import '@/styles/CarCard.scss';
 import KeyValueDisplay from "./KeyValueDisplay";

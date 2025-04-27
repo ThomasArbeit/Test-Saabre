@@ -2,7 +2,7 @@ export type Dimension = {
  length: number,
  width: number,
  height: number,
-};``
+};
 
 export type Pricing = {
  basePrice: string,

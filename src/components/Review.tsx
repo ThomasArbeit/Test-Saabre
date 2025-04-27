@@ -1,6 +1,5 @@
 import { ReviewEntity } from "@/models/Review"
 import { Reviews } from "@/types/globals"
-import Image from "next/image";
 import '@/styles/Review.scss'
 import Rating from "./Rating";
 import ImageWithFallback from "./ImageWithFallBack";
