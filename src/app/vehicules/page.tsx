@@ -3,12 +3,16 @@ import Pagination from "@/components/Pagination";
 import { Car } from "@/types/globals";
 import Link from "next/link";
 
-type VehiculesProps = {
- query: {limit?: string, offset?: string};
+type SearchParams = {
+ searchParams : {
+  limit?: string,
+  offset?: string;
+ }
 };
 
-export default async function Vehicules ({ query } : VehiculesProps) {
- const searchParamsAwaited = await query;
+export default async function Vehicules ({ searchParams } : { searchParams: Promise<SearchParams>}) {
+ const searchParamsAwaited = await searchParams;
+ console.log('searchParams', searchParams);
  const limit = parseInt(searchParamsAwaited?.limit || '10');
  const offset = parseInt(searchParamsAwaited?.offset || '0');
  const currentPage = Math.floor(offset / limit) + 1;
