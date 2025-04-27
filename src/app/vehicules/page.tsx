@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import CarCard from "@/components/CarCard";
 import Pagination from "@/components/Pagination";
 import { Car } from "@/types/globals";
