@@ -12,6 +12,7 @@ export default function ImageWithFallback({ src, fallbackSrc, alt, ...props }: I
 
   return (
       <Image
+        {...props}
         src={imgSrc}
         alt={alt}
         objectFit="cover"
