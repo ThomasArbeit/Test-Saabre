@@ -14,8 +14,6 @@ Elle permet de consulter une liste paginée de véhicules récupérée via une A
 
 - [Next.js](https://nextjs.org/)
 - [React](https://react.dev/)
-- [API REST externe]
-- CSS Modules / Tailwind CSS / autre (préciser si besoin)
 
 ## Installation
 
