@@ -4,7 +4,6 @@ import '@/styles/CarCard.scss';
 import KeyValueDisplay from "./KeyValueDisplay";
 import Rating from "./Rating";
 import { CarEntity } from "@/models/Car";
-import Image from "next/image";
 import ImageWithFallback from "./ImageWithFallBack";
 
 type CarCardProps = {

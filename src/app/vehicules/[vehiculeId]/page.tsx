@@ -7,7 +7,6 @@ import Review from "@/components/Review";
 import { CarEntity } from "@/models/Car";
 import { Reviews } from "@/types/globals";
 import { formatDateFr } from "@/utils/formatter";
-import Image from "next/image";
 
 type Params = {
   vehiculeId: string;
@@ -32,7 +31,6 @@ export default async function VehiculeDetail({ params }: { params: Promise<Param
       <div className="page__header-img-wrapper">
         <ImageWithFallback src={car.imageSrcBig} alt={`Image d'une voiture du modele ${car.model} de la marque ${car.brand} `} fallbackSrc={"/empty-img.png"}></ImageWithFallback>
       </div>
-        {/* <Image className="page__header-img" src={car.imageSrcBig} width={1087} height={600} alt={`Image d'une voiture du modele ${car.model} de la marque ${car.brand}`}></Image> */}
       </section>
       <section className="page__main">
         <div className="page__content">
