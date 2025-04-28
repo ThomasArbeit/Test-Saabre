@@ -5,10 +5,18 @@
  gap: variables.$spacing-sm;
  margin-bottom: variables.$spacing-md;
 
+ &__img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: variables.$radius-pill;
+  height: variables.$spacing-xl;
+  min-width: variables.$spacing-xl;
+ }
+ 
  &__img {
+  border-radius: variables.$radius-pill;
   display: flex;
   object-fit: cover;
-  border-radius: variables.$radius-pill;
  }
 
  &__content-header{

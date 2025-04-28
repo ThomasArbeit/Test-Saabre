@@ -9,13 +9,18 @@ interface ImageWithFallbackProps extends ImageProps {
 
 export default function ImageWithFallback({ src, fallbackSrc, alt, ...props }: ImageWithFallbackProps) {
   const [imgSrc, setImgSrc] = useState(src);
+  const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <Image
-      {...props}
-      src={imgSrc}
-      alt={alt}
-      onError={() => setImgSrc(fallbackSrc)}
-    />
+      <Image
+        src={imgSrc}
+        alt={alt}
+        objectFit="cover"
+        layout="fill"
+        placeholder="blur"
+        blurDataURL={fallbackSrc}
+        onLoadingComplete={() => setIsLoading(false)}
+        onError={() => setImgSrc(fallbackSrc)}
+      />
   );
 }

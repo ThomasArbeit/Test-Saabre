@@ -23,6 +23,7 @@
   width: 200px;
   border-radius: variables.$spacing-xxs;
   overflow: hidden;
+  position: relative;
 
   @media (max-width: 720px) {
    width: 100%;
@@ -76,9 +77,6 @@
 
  &:hover {
   background-color: variables.$color-surface-hover;
-  .carcard__img {
-   transform: scale(1.2);
-  }
  }
 
 }

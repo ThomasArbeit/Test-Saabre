@@ -4,6 +4,8 @@ import '@/styles/CarCard.scss';
 import KeyValueDisplay from "./KeyValueDisplay";
 import Rating from "./Rating";
 import { CarEntity } from "@/models/Car";
+import Image from "next/image";
+import ImageWithFallback from "./ImageWithFallBack";
 
 type CarCardProps = {
  props: Car;
@@ -15,7 +17,7 @@ export default function CarCard ({props}:CarCardProps) {
 
  return <div className="carcard">
   <div className="carcard__img-wrapper">
-   <img src={car.imageSrcSmall} alt={`Image d'une voiture du modele ${car.model} de la marque ${car.brand} `} className="carcard__img" />
+   <ImageWithFallback src={car.imageSrcSmall} alt={`Image d'une voiture du modele ${car.model} de la marque ${car.brand} `} fallbackSrc={"/empty-img.png"}></ImageWithFallback>
   </div>
   <div className="carcard__content">
    <div className="carcard__content-left">

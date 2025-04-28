@@ -34,4 +34,9 @@
   padding: variables.$spacing-sm;
  }
 
+ &--xs {
+  font-size: variables.$font-size-sm;
+  padding: variables.$spacing-xs;
+ }
+
 }

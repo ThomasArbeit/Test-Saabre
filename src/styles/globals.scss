@@ -108,23 +108,25 @@ ul {
   gap: variables.$spacing-xl;
   flex: 1;
   max-width: 100%;
+  width: 100%;
 
   @media (max-width: 720px) {
    gap: variables.$spacing-md;
   }
  }
 
- &__header-img {
+ &__header-img-wrapper {
   border-radius: variables.$radius-lg;
-  max-width: 100%;
-  object-fit: cover;
-
+  overflow: hidden;
+  position: relative;
+  height: 600px;
+  width: 100%;
   @media (max-width: 720px) {
    aspect-ratio: 1;
-   height:auto;
+   height: auto;
   }
  }
-
+ 
  &__header-text {
   display: flex;
   flex-direction: column;
