@@ -20,7 +20,7 @@ export default async function VehiculeDetail({ params }: { params: Promise<Param
   const car = new CarEntity(apiResult.data);
 
   return (
-    <>
+    <main>
     <div className="page">
       <section className="page__header">
       <div className="page__header-title-zone">
@@ -74,7 +74,7 @@ export default async function VehiculeDetail({ params }: { params: Promise<Param
         </aside>
       </section>
     </div>
-    </>
+    </main>
   );
 }
  
