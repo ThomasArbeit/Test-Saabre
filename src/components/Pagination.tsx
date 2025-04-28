@@ -64,10 +64,14 @@ const pages = createPageArray();
     )}
    </div>
 
+   {
+    actualPage < totalPages && 
+    <Link className="pagination__link" href={`${basePath}?limit=${limit}&offset=${(Number(actualPage))*limit}`}>
+      <ArrowRight/>
+    </Link>
+   }
 
-   <Link className="pagination__link" href={`${basePath}?limit=${limit}&offset=${(Number(actualPage))*limit}`}>
-    <ArrowRight/>
-   </Link>
+
   </div>
  )
 }
