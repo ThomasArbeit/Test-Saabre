@@ -1,35 +1,37 @@
+@use 'variables';
+
 .button {
  border: 1px solid transparent;
- background-color: #ff4300;
- padding: 0.75rem 1rem;
- border-radius: .5rem;
+ background-color: variables.$color-primary;
+ padding: variables.$spacing-sm variables.$spacing-md;
+ border-radius: variables.$radius-md;
  cursor: pointer;
  display: flex;
  align-items: center;
  justify-content: center;
- gap: .25rem;
- font-size: 1rem;
+ gap: variables.$spacing-xxs;
+ font-size: variables.$font-size-md;
  color: white;
- transition: background-color .15s ease-in-out;
+ transition: background-color variables.$transition-fast;
 
  &:hover {
-  background-color: #c54314;
+  background-color: variables.$color-primary-hover;
  }
  
  
  &--secondary{
-  color: #000;
-  border: 1px solid #DCDCDC;
-  background-color: white;
+  color: variables.$color-text-primary;
+  border: 1px solid variables.$color-border;
+  background-color: variables.$color-surface;
 
   &:hover {
-   background-color: #f7f7f7;
+   background-color: variables.$color-surface-hover;
   }
   
  }
 
  &--icon-only {
-  padding: .75rem;
+  padding: variables.$spacing-sm;
  }
 
 }

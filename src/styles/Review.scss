@@ -1,29 +1,31 @@
+@use 'variables';
+
 .review {
  display: flex;
- gap: .75rem;
- margin-bottom: 1rem;
+ gap: variables.$spacing-sm;
+ margin-bottom: variables.$spacing-md;
 
  &__img {
   display: flex;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: variables.$radius-pill;
  }
 
  &__content-header{
   display: flex;
-  gap: .5rem;
-  font-size: 1rem;
-  line-height: 2rem;
+  gap: variables.$spacing-xs;
+  font-size: variables.$font-size-md;
+  line-height: variables.$spacing-xl;
  }
 
  &__date {
-  color: #8E8E8E;
-  font-size: 0.875rem;
-  line-height: 1.5rem;
+  color: variables.$color-text-secondary;
+  font-size: variables.$font-size-sm;
+  line-height: variables.$line-height-base;
  }
 
  &__content-comment {
-  font-size: 0.875rem;
-  line-height: 1.5rem;
+  font-size: variables.$font-size-sm;
+  line-height: variables.$line-height-base;
  }
 }

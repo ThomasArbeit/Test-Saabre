@@ -1,15 +1,17 @@
+@use 'variables';
+
 .header {
  display: flex;
  position: sticky;
  top: 0;
- padding: 1rem 0;
- background: white;
+ padding: variables.$spacing-md 0;
+ background: variables.$color-background;
  z-index: 2;
 
  &__logo{
   font-size: 22px;
-  font-weight: 700;
-  color: #ff4300;
+  font-weight: variables.$font-weight-bold;
+  color: variables.$color-primary;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,21 +24,22 @@
   flex: 1;
   align-items: center;
   justify-content: center;
-  gap: .5rem;
+  gap: variables.$spacing-xxs;
  }
 
  &__nav-link {
-  padding: .75rem;
-  color:black;
-  border-radius: .5rem;
-  font-weight: 500;
+  padding: variables.$spacing-sm;
+  color:variables.$color-text-primary;
+  border-radius: variables.$radius-md;
+  font-weight: variables.$font-weight-medium;
+  background-color: variables.$color-background;
 
   &:hover {
-   background-color: #f7f7f7;
+   background-color: variables.$color-surface-hover;
   }
   
   &--active {
-   color:#ff4300;
+   color: variables.$color-primary;
   }
 
   &--disabled {

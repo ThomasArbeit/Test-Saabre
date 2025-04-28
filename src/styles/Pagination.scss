@@ -1,34 +1,37 @@
+@use 'variables';
+
 .pagination {
  display: flex;
  align-items: center;
  justify-content: center;
+ gap: variables.$spacing-md;
 
  &__numbers {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: .5rem;
+  gap: variables.$spacing-xs;
  }
 
  &__link {
   min-width: 2.5rem;
   min-height: 2.5rem;
-  font-size: 1rem;
-  padding: 0.5rem;
-  border-radius: .5rem;
-  border: 1px solid #dcdcdc;
+  font-size: variables.$font-size-md;
+  padding: variables.$spacing-xs;
+  border-radius: variables.$radius-md;
+  border: 1px solid variables.$color-border;
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color .15s ease-in-out;
+  transition: background-color variables.$spacing-xs;
 
   &:hover:not(.pagination__link--active) {
-   background-color: #f7f7f7;
+   background-color: variables.$color-surface-hover;
   }
 
   &--active {
-   background-color: #ff4300;
+   background-color: variables.$color-primary;
    color: white;
    border-color: transparent;
   }

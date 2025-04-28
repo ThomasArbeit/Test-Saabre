@@ -1,10 +1,12 @@
+@use 'variables';
+
 .badge {
  display: flex;
  align-items: center;
  justify-content: center;
- padding: 4px 12px;
- font-size: 14px;
- border-radius: 4px;
- background-color: #efefef;
+ padding: variables.$spacing-xxs variables.$spacing-sm;
+ font-size: variables.$font-size-sm;
+ border-radius: variables.$radius-sm;
+ background-color: variables.$color-surface-secondary;
  flex-grow: 0;
 }

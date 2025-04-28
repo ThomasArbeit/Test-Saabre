@@ -1,25 +1,27 @@
+@use 'variables';
+
 .carcard {
  display: flex;
  align-items: center;
  width: 100%;
- padding: 44px;
- border-radius: 16px;
- border: 1px solid #DCDCDC;
- gap: 24px;
- background-color: white;
+ padding: variables.$spacing-xxl;
+ border-radius: variables.$radius-lg;
+ border: 1px solid variables.$color-border;
+ gap: variables.$spacing-lg;
+ background-color: variables.$color-surface;
  cursor: pointer;
- transition: background-color .15s ease-in-out;
+ transition: background-color variables.$transition-fast;
  overflow: hidden;
 
  @media (max-width: 720px) {
   flex-direction: column;
-  padding: 1.5rem;
+  padding: variables.$spacing-lg;
  }
  
  &__img-wrapper {
   height: 116px;
   width: 200px;
-  border-radius: 4px;
+  border-radius: variables.$spacing-xxs;
   overflow: hidden;
 
   @media (max-width: 720px) {
@@ -30,27 +32,27 @@
 
  &__img {
   transition: transform .3s ease-in-out;
-  border-radius: .25rem;
+  border-radius: variables.$radius-sm;
   width: 100%;
   height: 100%;
   object-fit: cover;
  }
 
  &__price {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: variables.$font-size-sm;
+  font-weight: variables.$font-weight-semibold;
   line-height: 100%;
  }
 
  &__content {
   display: flex;
   flex: 1;
-  gap: 12px;
+  gap: variables.$spacing-sm;
 
   @media (max-width: 720px) {
    flex-direction: column;
    width: 100%;
-   gap: 2rem;
+   gap: variables.$spacing-xl;
   }
  }
 
@@ -59,7 +61,7 @@
   flex: 1;
   flex-direction: column;
   align-items: flex-start;
-  gap: 12px;
+  gap: variables.$spacing-sm;
  }
 
 
@@ -68,13 +70,12 @@
   flex: 1;
   flex-direction: column;
   justify-content: center;
-  gap: 16px;
-
+  gap: variables.$spacing-md;
  }
 
 
  &:hover {
-  background-color: #f7f7f7;
+  background-color: variables.$color-surface-hover;
   .carcard__img {
    transform: scale(1.2);
   }

@@ -1,21 +1,23 @@
+@use 'variables';
+
 .key-value-display {
- font-size: 16px;
+ font-size: variables.$font-size-md;
  line-height: 100%;
  display: flex;
  justify-content: space-between;
- padding-bottom: 16px;
- border-bottom: 1px solid #dcdcdc;
- gap: 16px;
+ padding-bottom: variables.$spacing-md;
+ border-bottom: 1px solid variables.$color-border;
+ gap: variables.$spacing-md;
  flex: 1;
  
  span {
-  font-weight: 400;
-  color: #8e8e8e;
+  font-weight: variables.$font-weight-regular;
+  color: variables.$color-text-secondary;
  }
 
  strong {
-  font-weight: 400;
-  color: #000;
+  font-weight: variables.$font-weight-regular;
+  color: variables.$color-text-primary;
   text-align: right;
  }
 }
