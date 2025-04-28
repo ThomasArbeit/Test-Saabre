@@ -1,0 +1,42 @@
+.header {
+ display: flex;
+ position: sticky;
+ top: 0;
+ padding: 1rem 0;
+ background: white;
+ z-index: 2;
+
+ &__logo{
+  font-size: 22px;
+  font-weight: 700;
+  color: #ff4300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: -3%;
+ }
+
+ &__nav{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+ }
+
+ &__nav-link {
+  padding: .75rem;
+  color:black;
+  border-radius: .5rem;
+  font-weight: 500;
+
+  &:hover {
+   background-color: #f7f7f7;
+  }
+  
+  &--active {
+   color:#ff4300;
+  }
+ }
+}

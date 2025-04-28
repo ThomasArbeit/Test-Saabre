@@ -15,6 +15,6 @@ export default function BackButton() {
   };
 
   return (
-    <Button secondary text="Retour" onClick={handleBackClick} leftIcon="arrow-left"/>
+    <Button iconOnly secondary onClick={handleBackClick} leftIcon="arrow-left"/>
   );
 }

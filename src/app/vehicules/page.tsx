@@ -12,7 +12,6 @@ type SearchParams = {
 
 export default async function Vehicules ({ searchParams } : { searchParams: Promise<SearchParams>}) {
  const searchParamsAwaited = await searchParams;
- console.log('searchParams coucou ici', searchParams);
  const limit = parseInt(searchParamsAwaited?.limit || '10');
  const offset = parseInt(searchParamsAwaited?.offset || '0');
  const currentPage = Math.floor(offset / limit) + 1;

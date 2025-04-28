@@ -1,5 +1,6 @@
 import Link from "next/link"
 import '@/styles/Pagination.scss';
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 type PaginationProps = {
  actualPage: number,
@@ -46,7 +47,7 @@ const pages = createPageArray();
   <div className="pagination">
    { actualPage > 1 && 
     <Link className="pagination__link" href={`${basePath}?limit=${limit}&offset=${(Number(actualPage) - 2)*limit}`}>
-     Precedent
+     <ArrowLeft/>
     </Link>
    }
    <div className="pagination__numbers">
@@ -65,7 +66,7 @@ const pages = createPageArray();
 
 
    <Link className="pagination__link" href={`${basePath}?limit=${limit}&offset=${(Number(actualPage))*limit}`}>
-    Suivant
+    <ArrowRight/>
    </Link>
   </div>
  )

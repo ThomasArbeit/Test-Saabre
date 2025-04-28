@@ -8,7 +8,6 @@
 a {
  text-decoration: unset;
  color: unset;
- user-select: all;
 }
 
 main {
@@ -24,7 +23,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+ text-align: center;
  font-size: 32px;
+
+ @media (max-width: 600px) {
+  font-size: 24px;
+ }
 }
 
 h2 {
@@ -42,10 +46,10 @@ h4{
 body {
  max-width: 1120px;
  width: 100%;
- margin: 68px auto;
+ margin: 0 auto;
  display: flex;
  flex-direction: column;
- padding: 0 24px;
+ padding: 0 24px 10rem;
 }
 
 ul {
@@ -76,17 +80,61 @@ ul {
  flex-direction: column;
  justify-content: flex-start;
  align-items: flex-start;
+ max-width: 100%;
+ 
+ @media (max-width: 720px) {
+  gap: 1.5rem;
+ }
+
+ &__header-title-zone {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  height: 3rem;
+ }
+
+ &__header-back-btn {
+  position: absolute;
+ }
+
+ &__header-title-actions {
+  display: block;
+  min-width: 2rem;
+  position: absolute;
+ }
+
+ &__header-title {
+  flex: 1;
+  padding: 0 4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  width: 100%;
+ }
 
  &__header {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  flex: 1;
+  max-width: 100%;
+
+  @media (max-width: 720px) {
+   gap: .5rem;
+  }
  }
 
  &__header-img {
   border-radius: 16px;
   max-width: 100%;
   object-fit: cover;
+
+  @media (max-width: 720px) {
+   aspect-ratio: 1;
+   height:auto;
+  }
  }
 
  &__header-text {
@@ -136,6 +184,14 @@ ul {
   display: flex;
   flex-direction: column;
   flex: 2;
+
+  @media (max-width: 720px) {
+   position: fixed;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   background: white;
+  }
  }
 }
 
@@ -146,4 +202,18 @@ ul {
  display: flex;
  flex-direction: column;
  gap: 1rem;
+
+ @media (max-width: 720px) {
+  padding: 1.5rem;
+  border-radius: unset;
+  border: unset;
+  border-top: 1px solid #DCDCDC;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+ }
+
+ &__title {
+  @media (max-width: 720px) {
+   display: none;
+  }
+ }
 }

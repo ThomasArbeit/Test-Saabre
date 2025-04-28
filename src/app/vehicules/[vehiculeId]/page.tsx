@@ -21,17 +21,19 @@ export default async function VehiculeDetail({ params }: { params: Promise<Param
   return (
     <>
     <div className="page">
-      <BackButton></BackButton>
-      <header className="page__header">
-        <div className="page__header-text">
-          <h1 className="page__header-title">{car.fullTitle}</h1>
-          <p className="page__header-annotation">Derniere mise a jour : {formatDateFr(car.lastUpdated)}</p>
+      <section className="page__header">
+      <div className="page__header-title-zone">
+        <div className="page__header-back-btn"> 
+          <BackButton></BackButton>
         </div>
+        <h1 className="page__header-title">{car.fullTitle}</h1>
+      </div>
         <Image className="page__header-img" src={car.imageSrcBig} width={1087} height={600} alt={`Image d'une voiture du modele ${car.model} de la marque ${car.brand}`}></Image>
-      </header>
-      <div className="page__main">
+      </section>
+      <section className="page__main">
         <div className="page__content">
         <div className="page__subheader">
+          <p className="page__header-annotation">Derniere mise a jour : {formatDateFr(car.lastUpdated)}</p>
           <h2>{car.fullSubtitle}</h2>
           {
             car.hasRatings &&
@@ -62,12 +64,12 @@ export default async function VehiculeDetail({ params }: { params: Promise<Param
         </div>
         <aside className="page__aside">
           <div className="cta-card">
-            <h4>{car.fullTitle}</h4>
+            <h4 className="cta-card__title">{car.fullTitle}</h4>
             <KeyValueDisplay label="Prix moyen actuel" value={car.readableCurrentPrice}/>
             <Button text="Voir les annonces" leftIcon="eye"/>
           </div>
         </aside>
-      </div>
+      </section>
     </div>
     </>
   );

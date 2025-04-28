@@ -9,16 +9,31 @@
  background-color: white;
  cursor: pointer;
  transition: background-color .15s ease-in-out;
+ overflow: hidden;
 
+ @media (max-width: 720px) {
+  flex-direction: column;
+  padding: 1.5rem;
+ }
+ 
  &__img-wrapper {
   height: 116px;
   width: 200px;
   border-radius: 4px;
   overflow: hidden;
+
+  @media (max-width: 720px) {
+   width: 100%;
+   height: 200px;
+  }
  }
 
  &__img {
   transition: transform .3s ease-in-out;
+  border-radius: .25rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
  }
 
  &__price {
@@ -31,6 +46,12 @@
   display: flex;
   flex: 1;
   gap: 12px;
+
+  @media (max-width: 720px) {
+   flex-direction: column;
+   width: 100%;
+   gap: 2rem;
+  }
  }
 
  &__content-left {
