@@ -37,3 +37,32 @@ export const formatDateFr = (dateString: string ) => {
   minute: '2-digit',
  });
 }
+
+export const getElapsedTime = (commentDate: Date): string => {
+ const now = new Date();
+ const elapsedMs = now.getTime() - commentDate.getTime();
+
+ const seconds = Math.floor(elapsedMs / 1000);
+ const minutes = Math.floor(seconds / 60);
+ const hours = Math.floor(minutes / 60);
+ const days = Math.floor(hours / 24);
+ const months = Math.floor(days / 30);
+ const years = Math.floor(days / 365);
+
+ if (years > 0) {
+   return `il y a ${years} an${years > 1 ? 's' : ''}`;
+ }
+ if (months > 0) {
+   return `il y a ${months} mois`;
+ }
+ if (days > 0) {
+   return `il y a ${days} jour${days > 1 ? 's' : ''}`;
+ }
+ if (hours > 0) {
+   return `il y a ${hours} heure${hours > 1 ? 's' : ''}`;
+ }
+ if (minutes > 0) {
+   return `il y a ${minutes} minute${minutes > 1 ? 's' : ''}`;
+ }
+ return `il y a quelques secondes`;
+}

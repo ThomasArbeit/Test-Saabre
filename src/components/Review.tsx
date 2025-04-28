@@ -18,7 +18,8 @@ export default function Review ({props}: ReviewProps) {
    <div className="review__content">
     <div className="review__content-header">
      <p className="review__name">{review.fullName}</p>
-     <p className="review__date">Date</p>
+     <span>-</span>
+     <p className="review__date">{review.readableElapsedTime}</p>
     <Rating rating={review.ratingToNumber} size={16}/>
     </div>
     <p className="review__content-comment">

@@ -1,4 +1,5 @@
 import { Reviews } from "@/types/globals";
+import { getElapsedTime } from "@/utils/formatter";
 
 export class ReviewEntity {
  reviewer: Reviews["reviewer"];
@@ -21,6 +22,11 @@ export class ReviewEntity {
  
  public get ratingToNumber() : number {
   return Number(this.rating);
+ }
+ 
+ 
+ public get readableElapsedTime() : string {
+  return getElapsedTime(new Date(this.reviewDate));
  }
  
  
