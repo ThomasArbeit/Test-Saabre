@@ -38,5 +38,12 @@
   &--active {
    color:#ff4300;
   }
+
+  &--disabled {
+   opacity: 0.4;
+   cursor: not-allowed;
+   user-select: none;
+   pointer-events: hover;
+  }
  }
 }

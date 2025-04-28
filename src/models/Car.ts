@@ -107,7 +107,7 @@ export class CarEntity {
  }
  
  public get imageSrcSmall() : string {
-  return `https://picsum.photos/seed/${this.id*10}/200/116`;
+  return `https://picsum.photos/seed/${this.id*10}/400/240`;
  }
  
  

@@ -13,7 +13,7 @@ export default function Header () {
    <div className="header__logo">airKnK</div>
    <ul className="header__nav">
      <li><Link className={`header__nav-link ${pathname === '/vehicules' ? 'header__nav-link--active' : ''}`} href="/vehicules">Véhicules</Link></li>
-     <li><Link className={`header__nav-link ${pathname === '/news' ? 'header__nav-link--active' : ''}`}href="/news">Actualités</Link></li>
+     <li><Link onClick={(e) => e.preventDefault()} className={`header__nav-link header__nav-link--disabled ${pathname === '/news' ? 'header__nav-link--active' : ''}`}href="/news">Actualités</Link></li>
    </ul>
    <div className="header__actions"><Button iconOnly leftIcon="user"/></div>
   </header>
