@@ -15,7 +15,7 @@ export default function Review ({props}: ReviewProps) {
  return (
   <div className="review">
    <div className="review__img-wrapper">
-    <ImageWithFallback className="review__img" fallbackSrc={"/empty-avatar.png"} src={review.reviewer.avatar} alt={`Avatar de ${review.fullName}`} width={32} height={32}/>
+    <ImageWithFallback className="review__img" fallbackSrc={"/empty-avatar.png"} src={review.reviewer.avatar} alt={`Avatar de ${review.fullName}`}/>
    </div>
    <div className="review__content">
     <div className="review__content-header">
