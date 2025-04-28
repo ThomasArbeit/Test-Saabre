@@ -33,12 +33,12 @@ $spacing-xxl: 3rem;
 // 🅰️ Typography
 // ----------------------------------------------
 
-$font-size-xs: 12px;
-$font-size-sm: 14px;
-$font-size-md: 16px;
-$font-size-lg: 20px;
-$font-size-xl: 24px;
-$font-size-xxl: 32px;
+$font-size-xs: .75rem;
+$font-size-sm: .875rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 1.5rem;
+$font-size-xxl: 2rem;
 
 $font-weight-regular: 400;
 $font-weight-medium: 500;
@@ -53,10 +53,10 @@ $line-height-heading: 1.2;
 // 📏 Border Radius
 // ----------------------------------------------
 
-$radius-xs: 2px;
-$radius-sm: 4px;
-$radius-md: 8px;
-$radius-lg: 16px;
+$radius-xs: .125rem;
+$radius-sm: .25rem;
+$radius-md: .5rem;
+$radius-lg: 1rem;
 $radius-pill: 9999px;
 
 // ----------------------------------------------
